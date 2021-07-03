@@ -1,6 +1,8 @@
 import React from 'react';
 import './SelectedPlayer.css';
 import PlayerThumbnail from '../PlayerThumbnail/PlayerThumbnail';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faDollarSign } from '@fortawesome/free-solid-svg-icons'
 
 
 const SelectedPlayer = (props) => {
@@ -15,8 +17,8 @@ const SelectedPlayer = (props) => {
         <div className="container">
 
                 <div className="d-flex justify-content-evenly align-items-center selected-board">
-                    <h5 className="high-light">Total Selected Palyers: {selectedPlayers.length}</h5>
-                    <h5 className="high-light">Total Salary Amount: {totalAmount}</h5>
+                    <h5 className="high-light"><FontAwesomeIcon icon={faUser} /> Total Selected Palyers: {selectedPlayers.length}</h5>
+                    <h5 className="high-light"> <FontAwesomeIcon icon={faDollarSign} /> Total Salary Amount: {totalAmount}</h5>
                     
                     <button className="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">VIEW DETAILS</button>
 
